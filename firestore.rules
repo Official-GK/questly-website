@@ -1,0 +1,62 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    function isMember(members) {
+      return members.hasAny([{'id': request.auth.uid}]);
+    }
+
+    // Users Collection
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Study Groups Collection
+    match /studyGroups/{groupId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && (isMember(resource.data.members) || request.auth.uid == resource.data.createdBy);
+      allow delete: if isAuthenticated() && request.auth.uid == resource.data.createdBy;
+
+      // Messages Subcollection
+      match /messages/{messageId} {
+        allow read: if isAuthenticated() && isMember(get(/databases/$(database)/documents/studyGroups/$(groupId)).data.members);
+        allow create: if isAuthenticated() && isMember(get(/databases/$(database)/documents/studyGroups/$(groupId)).data.members);
+        allow update, delete: if isAuthenticated() && request.auth.uid == resource.data.userId;
+      }
+    }
+
+    // Progress Collection
+    match /progress/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Mock Tests Collection
+    match /mockTests/{testId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Mock Test Attempts Collection
+    match /mockTestAttempts/{attemptId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Default rule - deny everything else
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

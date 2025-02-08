@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 15%;  /* Spotify card color #282828 */
+    --card-foreground: 0 0% 100%;
+ 
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 100%;
+ 
+    --primary: 142 72% 29%;  /* Spotify Green #1DB954 */
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 0 0% 24%;  /* Spotify secondary #3E3E3E */
+    --secondary-foreground: 0 0% 100%;
+ 
+    --muted: 0 0% 24%;
+    --muted-foreground: 0 0% 63.9%;
+ 
+    --accent: 142 72% 29%;  /* Spotify Green */
+    --accent-foreground: 0 0% 100%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 72% 29%;  /* Spotify Green */
+    --success-foreground: 0 0% 100%;
+ 
+    --border: 0 0% 24%;  /* Spotify border color */
+    --input: 0 0% 24%;
+    --ring: 142 72% 29%;
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Spotify-like hover transitions */
+.hover-spotify {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.hover-spotify:hover {
+  @apply transform scale-[1.02] bg-[#3E3E3E];
+}
+
+/* Spotify-like button styles */
+.btn-spotify {
+  @apply rounded-full bg-[#1DB954] px-8 py-3 font-bold text-black transition-transform hover:scale-105;
+}
+
+.btn-spotify-outline {
+  @apply rounded-full border border-white px-8 py-3 font-bold text-white transition-all hover:border-[#1DB954] hover:text-[#1DB954];
+}
