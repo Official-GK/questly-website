@@ -1,69 +1,110 @@
-# Welcome to your Lovable project
+# 🎓 Questly - Modern Learning Platform
 
-## Project info
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-**URL**: https://lovable.dev/projects/fad767a5-2318-4d23-8c11-281c86c58583
+Questly is a next-generation learning platform that combines interactive courses, real-time collaboration, and AI-powered study tools to create an engaging educational experience.
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+### 📚 Interactive Learning
+- Rich multimedia course content
+- Progress tracking and achievements
+- Personalized learning paths
+- Interactive quizzes and assessments
 
-**Use Lovable**
+### 👥 Study Groups
+- Real-time voice and text chat
+- Collaborative study rooms
+- Screen sharing capabilities
+- Group progress tracking
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fad767a5-2318-4d23-8c11-281c86c58583) and start prompting.
+### 🤖 AI-Powered Tools
+- Smart study recommendations
+- Automated quiz generation
+- Content summarization
+- Personalized feedback
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🎯 Gamification
+- Experience points (XP) system
+- Achievement badges
+- Learning streaks
+- Leaderboards
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React 18 with TypeScript
+- **Styling**: TailwindCSS with custom UI components
+- **Backend**: Firebase (Auth, Firestore, Storage)
+- **Real-time**: WebRTC for voice/video
+- **State Management**: React Context + Custom Hooks
+- **Build Tool**: Vite
+- **Testing**: Vitest + React Testing Library
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Official-GK/questly-website.git
+   cd questly-website
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   # Add your Firebase configuration
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-**Edit a file directly in GitHub**
+## 📱 Screenshots
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+<details>
+<summary>Click to view screenshots</summary>
 
-**Use GitHub Codespaces**
+- Dashboard View
+- Study Group Interface
+- Course Player
+- Interactive Quiz
+- Profile Page
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+</details>
 
-## What technologies are used for this project?
+## 🤝 Contributing
 
-This project is built with .
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## How can I deploy this project?
+## 📄 License
 
-Simply open [Lovable](https://lovable.dev/projects/fad767a5-2318-4d23-8c11-281c86c58583) and click on Share -> Publish.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## I want to use a custom domain - is that possible?
+## 🙏 Acknowledgments
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- React Team for the amazing framework
+- Firebase for the powerful backend services
+- TailwindCSS for the utility-first CSS framework
+- All contributors who have helped shape Questly
+
+---
+Made with ❤️ by [Official-GK](https://github.com/Official-GK)
